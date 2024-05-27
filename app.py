@@ -8,8 +8,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-   print('Request for index page received')
    return render_template('index.html')
+
+@app.route('/privacy')
+def privacy():
+   return render_template('privacy.html')
 
 @app.route('/favicon.ico')
 def favicon():
